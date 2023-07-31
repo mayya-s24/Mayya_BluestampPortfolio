@@ -43,7 +43,7 @@ For your second milestone, explain what you've worked on since your previous mil
 
 # First Milestone
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/CaCazFBhYKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Vfw5lBs4yPw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 My first milestone was achieved when I finished physically building the RC Car and tested the motors to show that they worked. To build the RC Car, I had an instruction sheet that acted as a blueprint, showing me where every part should go and how to connect everything. However, I did have trouble connecting some of the parts occasionally since I needed to screw M1.6 * 16 cross screws into M1.6 nuts, and both of these parts are very tiny. I was able to overcome this challenge, though, by simply using a wrench I have at home, even though it still took a while to screw everything in.
   
