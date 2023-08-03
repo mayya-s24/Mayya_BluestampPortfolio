@@ -43,7 +43,7 @@ However, once I uploaded it and started pressing the buttons on my IR remote, th
 
 #include <SparkFun_TB6612.h>
 
-|
+
 
 #define AIN1 7
 
@@ -59,13 +59,13 @@ However, once I uploaded it and started pressing the buttons on my IR remote, th
 
 #define STBY 3
 
-|
+
 
 Motor motor1 = Motor(AIN1, AIN2, PWMA, offsetA, STBY);
 
 Motor motor2 = Motor(BIN1, BIN2, PWMB, offsetB, STBY);
 
-|
+
 
 } else if (key == "2") {
 
