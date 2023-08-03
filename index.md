@@ -35,11 +35,45 @@ For your final milestone, explain the outcome of your project. Key details to in
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/y3VAmNlER5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-For your second milestone, explain what you've worked on since your previous milestone. You can highlight:
-- Technical details of what you've accomplished and how they contribute to the final goal
-- What has been surprising about the project so far
-- Previous challenges you faced that you overcame
-- What needs to be completed before your final milestone 
+My second milestone was achieved when I finished adding and modifying the code for making the RC Car work properly with its IR remote. What I mean by this is that I was able to figure out how to get the remote that came with the RC Car to control it properly by going in different directions based on the arrows on the remote. Not only did I use the arrows to control it with the code, but I also was able to get the car to stop by using the OK button and to curve in four different angles with four buttons with number labels on them (1, 4, 3, and 6). I was able to do all of this by starting off with a base code for the IR remote and IR receiver from the Sunfounder website (it is linked in my resources section below). This file included code for the actual IR items and code for the decoded key values. With these two tabs of code open in my Arduino application, I was able to edit them and fit them to my RC Car’s needs.
+
+I started doing this by editing the decoded key values to match the hexadecimal numbers that the arrows and OK button on the remote output into the serial monitor on my Arduino application. After changing the hexadecimal numbers from the original Sunfounder code to the ones that my IR remote uses, I moved on to labeling the hex numbers so I could remember what number or word correlates to what button on the remote. I wrote these down so I would not forget them. Next, I went into the main code and checked to make sure that the movements under the void loop section are correlated to the correct label. For example, I would check to make sure that the right arrow button’s label was correlated with the “moveRight(speed);” command. I then verified the code and uploaded it onto my Arduino to test it and see if it works. 
+
+However, once I uploaded it and started pressing the buttons on my IR remote, the motors would not move the wheels or even start up. I did get confirmation that my IR remote was working, though, since my serial monitor said, “REMOTE CONTROL START.” My IR receiver was also working since every time that I clicked any button on my remote, a light glowed on my Arduino. So even though nothing was moving, I knew I was getting somewhere since the IR remote and receiver worked. Nonetheless, the next thing I had to do was figure out what went wrong. With help from my instructor and working on the code a bit more, I was able to make sense of what went wrong. What happened was that the Sunfounder code I found was meant for another type of RC Car with different motors and buttons on its IR remote. So, it made sense that my vehicle did not move at all. To fix this issue, I brought movement code from the Sparkfun library (from the motor testing code I used in milestone one) into the code I had and replaced Sunfounder’s movement and motor code with Sparkfun’s movement and motor codes. Here is the code that I added from Sparkfun at that time:
+
+#include <SparkFun_TB6612.h>
+#define AIN1 7
+#define BIN1 8
+#define AIN2 1
+#define BIN2 2
+#define PWMA 5
+#define PWMB 6
+#define STBY 3
+Motor motor1 = Motor(AIN1, AIN2, PWMA, offsetA, STBY);
+Motor motor2 = Motor(BIN1, BIN2, PWMB, offsetB, STBY);
+} else if (key == "2") {
+forward(motor1, motor2,75);
+} else if (key == "5") {
+right(motor1, motor2, 115);
+} else if (key == "6") {
+left(motor1, motor2, 115);
+} else if (key == "OK") {
+brake(motor1, motor2);
+} else if (key == "8") {
+back(motor1, motor2, -75);
+
+Since this only contains the bits of code I added from Sparkfun, these pieces of code shown above are only a part of the whole code (which is pasted below). I also removed the speed variable and decided to make a custom speed for each movement. Plus, I deleted all of the “analogWrite” functions at the bottom of the original code. Then, I verified and uploaded the new code onto my Arduino and tested it. This code only had five working buttons, but they were the most important ones: “OK” to make the motors stop, the right arrow to make the car turn right in one position, the left arrow to make the car turn left in one position, the forward arrow to make the motors accelerate forward, and the backward arrow to make the motors accelerate backward. All five of these movement commands ended up working when I tested them, so the problem of the motors not being connected correctly was solved. However, I did not want to stop here. The code from the Sparkfun library that I used from the motor testing code had more movements than just move forward, move backward, turn left, and turn right. So, I wanted to implement these into my RC Car as well. Even though I only had a number pad left to work with for buttons on my IR remote (1-9), I simply picked out four that somewhat correlated to the direction I wanted the car to go in. These directions were curving forward right, curving forward left, curving back right, and curving back left. Here are the pieces of code I used to make the RC Car move in these directions:
+
+} else if (key == "1") {
+motor1.drive(127.5,500);
+} else if (key == "3") {
+motor2.drive(127.5,500);
+} else if (key == "4") {
+motor1.drive(-127.5,500);
+} else if (key == "7") {
+motor2.drive(-127.5,500);
+
+This code was also tested and it worked very well. Right now, this is where my code and project as a whole is at. Since my general movement code is pretty much done for now, I want to start working on the hardware a bit more with adjusting the wheels to gain more traction and to stabilize them more. I will most likely be using lock nuts for this. I also would like to do a little bit more with the software and eventually make an object avoidance code. 
 
 # First Milestone
 
