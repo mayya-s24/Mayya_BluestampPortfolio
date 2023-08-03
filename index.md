@@ -43,6 +43,7 @@ However, once I uploaded it and started pressing the buttons on my IR remote, th
 
 #include <SparkFun_TB6612.h>
 
+|
 
 #define AIN1 7
 
@@ -58,11 +59,13 @@ However, once I uploaded it and started pressing the buttons on my IR remote, th
 
 #define STBY 3
 
+|
 
 Motor motor1 = Motor(AIN1, AIN2, PWMA, offsetA, STBY);
 
 Motor motor2 = Motor(BIN1, BIN2, PWMB, offsetB, STBY);
 
+|
 
 } else if (key == "2") {
 
@@ -87,12 +90,19 @@ back(motor1, motor2, -75);
 Since this only contains the bits of code I added from Sparkfun, these pieces of code shown above are only a part of the whole code (which is pasted below). I also removed the speed variable and decided to make a custom speed for each movement. Plus, I deleted all of the “analogWrite” functions at the bottom of the original code. Then, I verified and uploaded the new code onto my Arduino and tested it. This code only had five working buttons, but they were the most important ones: “OK” to make the motors stop, the right arrow to make the car turn right in one position, the left arrow to make the car turn left in one position, the forward arrow to make the motors accelerate forward, and the backward arrow to make the motors accelerate backward. All five of these movement commands ended up working when I tested them, so the problem of the motors not being connected correctly was solved. However, I did not want to stop here. The code from the Sparkfun library that I used from the motor testing code had more movements than just move forward, move backward, turn left, and turn right. So, I wanted to implement these into my RC Car as well. Even though I only had a number pad left to work with for buttons on my IR remote (1-9), I simply picked out four that somewhat correlated to the direction I wanted the car to go in. These directions were curving forward right, curving forward left, curving back right, and curving back left. Here are the pieces of code I used to make the RC Car move in these directions:
 
 } else if (key == "1") {
+
 motor1.drive(127.5,500);
+
 } else if (key == "3") {
+
 motor2.drive(127.5,500);
+
 } else if (key == "4") {
+
 motor1.drive(-127.5,500);
+
 } else if (key == "7") {
+
 motor2.drive(-127.5,500);
 
 This code was also tested and it worked very well. Right now, this is where my code and project as a whole is at. Since my general movement code is pretty much done for now, I want to start working on the hardware a bit more with adjusting the wheels to gain more traction and to stabilize them more. I will most likely be using lock nuts for this. I also would like to do a little bit more with the software and eventually make an object avoidance code. 
