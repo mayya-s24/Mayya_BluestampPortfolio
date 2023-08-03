@@ -42,24 +42,46 @@ I started doing this by editing the decoded key values to match the hexadecimal 
 However, once I uploaded it and started pressing the buttons on my IR remote, the motors would not move the wheels or even start up. I did get confirmation that my IR remote was working, though, since my serial monitor said, “REMOTE CONTROL START.” My IR receiver was also working since every time that I clicked any button on my remote, a light glowed on my Arduino. So even though nothing was moving, I knew I was getting somewhere since the IR remote and receiver worked. Nonetheless, the next thing I had to do was figure out what went wrong. With help from my instructor and working on the code a bit more, I was able to make sense of what went wrong. What happened was that the Sunfounder code I found was meant for another type of RC Car with different motors and buttons on its IR remote. So, it made sense that my vehicle did not move at all. To fix this issue, I brought movement code from the Sparkfun library (from the motor testing code I used in milestone one) into the code I had and replaced Sunfounder’s movement and motor code with Sparkfun’s movement and motor codes. Here is the code that I added from Sparkfun at that time:
 
 #include <SparkFun_TB6612.h>
+
+
 #define AIN1 7
+
 #define BIN1 8
+
 #define AIN2 1
+
 #define BIN2 2
+
 #define PWMA 5
+
 #define PWMB 6
+
 #define STBY 3
+
+
 Motor motor1 = Motor(AIN1, AIN2, PWMA, offsetA, STBY);
+
 Motor motor2 = Motor(BIN1, BIN2, PWMB, offsetB, STBY);
+
+
 } else if (key == "2") {
+
 forward(motor1, motor2,75);
+
 } else if (key == "5") {
+
 right(motor1, motor2, 115);
+
 } else if (key == "6") {
+
 left(motor1, motor2, 115);
+
 } else if (key == "OK") {
+
 brake(motor1, motor2);
+
 } else if (key == "8") {
+
 back(motor1, motor2, -75);
 
 Since this only contains the bits of code I added from Sparkfun, these pieces of code shown above are only a part of the whole code (which is pasted below). I also removed the speed variable and decided to make a custom speed for each movement. Plus, I deleted all of the “analogWrite” functions at the bottom of the original code. Then, I verified and uploaded the new code onto my Arduino and tested it. This code only had five working buttons, but they were the most important ones: “OK” to make the motors stop, the right arrow to make the car turn right in one position, the left arrow to make the car turn left in one position, the forward arrow to make the motors accelerate forward, and the backward arrow to make the motors accelerate backward. All five of these movement commands ended up working when I tested them, so the problem of the motors not being connected correctly was solved. However, I did not want to stop here. The code from the Sparkfun library that I used from the motor testing code had more movements than just move forward, move backward, turn left, and turn right. So, I wanted to implement these into my RC Car as well. Even though I only had a number pad left to work with for buttons on my IR remote (1-9), I simply picked out four that somewhat correlated to the direction I wanted the car to go in. These directions were curving forward right, curving forward left, curving back right, and curving back left. Here are the pieces of code I used to make the RC Car move in these directions:
