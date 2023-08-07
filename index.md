@@ -33,7 +33,7 @@ For your final milestone, explain the outcome of your project. Key details to in
 
 **Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/y3VAmNlER5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/No7-U9r60Jc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 My second milestone was achieved when I finished adding and modifying the code for making the RC Car work properly with its IR remote. What I mean by this is that I was able to figure out how to get the remote that came with the RC Car to control it properly by going in different directions based on the arrows on the remote. Not only did I use the arrows to control it with the code, but I also was able to get the car to stop by using the OK button and to curve in four different angles with four buttons with number labels on them (1, 4, 3, and 6). I was able to do all of this by starting off with a base code for the IR remote and IR receiver from the Sunfounder website (it is linked in my resources section below). This file included code for the actual IR items and code for the decoded key values. With these two tabs of code open in my Arduino application, I was able to edit them and fit them to my RC Car’s needs.
 
