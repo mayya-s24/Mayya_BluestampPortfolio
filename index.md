@@ -99,15 +99,146 @@ My next step in this project is to upload a code that lets me tell the car where
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
 
 ```c++
+//This is the beginning of the _main code_
+
+#include <IRremote.h>
+#include <SparkFun_TB6612.h>
+const int recvPin = 9;
+IRrecv irrecv(recvPin);
+decode_results results;
+
+#define AIN1 7
+#define BIN1 8
+#define AIN2 1
+#define BIN2 2
+#define PWMA 5
+#define PWMB 6
+#define STBY 3
+
+const int offsetA = 1;
+const int offsetB = 1;
+
+Motor motor1 = Motor(AIN1, AIN2, PWMA, offsetA, STBY);
+Motor motor2 = Motor(BIN1, BIN2, PWMB, offsetB, STBY);
+
+const int ledPin = 13;
+
 void setup() {
-  // put your setup code here, to run once:
   Serial.begin(9600);
-  Serial.println("Hello World!");
+   brake(motor1, motor2);
+   delay(1000);
+
+  //UR remote
+  irrecv.enableIRIn();
+  Serial.println("REMOTE CONTROL START");
+
+  //LED
+  pinMode(ledPin, OUTPUT);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
 
+  if (irrecv.decode(&results)) {
+        Serial.println(results.value,HEX);
+    String key = decodeKeyValue(results.value);
+    if ( key != "ERROR")
+    {
+      Serial.println(key);
+      blinkLED();
+      if (key == "+") {
+        //speed += 50;
+      } else if (key == "-") {
+        //speed -= 50;
+      } else if (key == "2") {
+        forward(motor1, motor2,75);
+      } else if (key == "1") {
+        motor1.drive(127.5,500);
+      } else if (key == "3") {
+        motor2.drive(127.5,500);
+      } else if (key == "4") {
+        motor1.drive(-127.5,500);
+      } else if (key == "5") {
+        right(motor1, motor2, 115);
+      } else if (key == "6") {
+        left(motor1, motor2, 115);
+      } else if (key == "7") {
+        motor2.drive(-127.5,500);
+      } else if (key == "9") {
+        //backRight(speed);
+      } else if (key == "OK") {
+        brake(motor1, motor2);
+      } else if (key == "8") {
+        back(motor1, motor2, -75);
+      }
+    }
+    irrecv.resume();
+  }
+}
+
+void blinkLED() {
+  for (int i = 0; i < 3; i++) {
+    digitalWrite(ledPin, HIGH);
+    delay(50);
+    digitalWrite(ledPin, LOW);
+    delay(50);
+  }
+}
+```
+
+```c++
+//This is the beginning of the _decode key values_
+//All of these extra values are commented out just in case you want to add more movement code to the car. This way, you will have a starting point and can simply change a commented out value.
+
+String decodeKeyValue(long result)
+{
+  switch(result){
+    //case 0xFF6897:
+    //  return "0";
+    case 0xFF6897:
+      return "1"; 
+    case 0xFF629D:
+      return "2"; 
+    case 0xFFB04F:
+      return "3"; 
+    case 0xFF30CF:
+      return "4"; 
+    case 0xFF22DD:
+      return "5"; 
+    case 0xFFC23D:
+      return "6"; 
+    case 0xFF7A85:
+      return "7"; 
+    case 0xFFA857:
+      return "8"; 
+    //case 0xFFA857:
+    //return "9"; 
+    case 0xFF02FD:
+      return "OK"; 
+    //case 0xFF02FD:
+    //  return "-"; 
+    //case 0xFFE01F:
+    //  return "EQ"; 
+    //case 0xFFB04F:
+    //  return "U/SD";
+    //case 0xFF9867:
+    //  return "CYCLE";         
+    //case 0xFF22DD:
+    //  return "PLAY/PAUSE";   
+    //case 0xFF02FD:
+    //  return "BACKWARD";   
+    //case 0xFFC23D:
+    //  return "FORWARD";   
+    //case 0xFFA25D:
+    //  return "POWER";   
+    //case 0xFFE21D:
+    //  return "MUTE";   
+    //case 0xFF629D:
+    //  return "MODE";       
+    case 0xFFFFFFFF:
+      return "ERROR";   
+    default :
+      return "ERROR";
+    }
 }
 ```
 
@@ -121,10 +252,8 @@ Don't forget to place the link of where to buy each component inside the quotati
 | Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
 | Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
 
-# Other Resources/Examples
-One of the best parts about Github is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
-- [Example 1](https://trashytuber.github.io/YimingJiaBlueStamp/)
-- [Example 2](https://sviatil0.github.io/Sviatoslav_BSE/)
-- [Example 3](https://arneshkumar.github.io/arneshbluestamp/)
-
-To watch the BSE tutorial on how to create a portfolio, click here.
+# Other Resources
+Here are some of the outside sources I used for the code and build of my project.
+- [Motor Testing Code from Sparkfun](https://learn.sparkfun.com/tutorials/tb6612fng-hookup-guide?_ga=2.67160402.2105495080.1686588805-674468134.1671124267&_gac=1.150684356.1686763051.CjwKCAjwyqWkBhBMEiwAp2yUFoz7lbp_jOUGI2bSCq_Bj9TRHZ_t6pfO7qw7H3x4ezKhMXuIkfPRuhoCOdEQAvD_BwE)
+- [Sunfounder Base Code for IR Remote](https://docs.sunfounder.com/projects/3in1-kit/en/latest/car_project/car_remote_control.html#car-remote)
+- [Tinkercad for Creating Schematics](https://www.tinkercad.com)
