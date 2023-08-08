@@ -97,7 +97,7 @@ So, with some help from my instructor, I found and visited a link on a website c
 My next step in this project is to upload a code that lets me tell the car where to go from the remote control instead of having just a motor testing code uploaded to the Arduino.
 
 # Schematics 
-Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 
+![Dazzling Jarv-Hango](https://github.com/mayya-s24/Mayya_BluestampPortfolio/assets/140424606/ba9b8d08-76ef-4752-9061-dc9f2e6aac0f)
 
 # Code
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
