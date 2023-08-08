@@ -100,6 +100,7 @@ Here's where you'll put your code. The syntax below places it into a block of co
 
 ```c++
 //This is the beginning of the _main code_
+//Keep this in its own tab while you're working on it
 
 #include <IRremote.h>
 #include <SparkFun_TB6612.h>
@@ -187,6 +188,7 @@ void blinkLED() {
 
 ```c++
 //This is the beginning of the _decode key values_
+//Keep this in its own tab while you're working on it
 //All of these extra values are commented out just in case you want to add more movement code to the car. This way, you will have a starting point and can simply change a commented out value.
 
 String decodeKeyValue(long result)
