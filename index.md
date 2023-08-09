@@ -243,9 +243,13 @@ Don't forget to place the link of where to buy each component inside the quotati
 
 | **Part** | **Note** | **Price** | **Link** |
 |:--:|:--:|:--:|:--:|
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
-| Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
+| Elegoo Smart Robot Car Kit | The main kit used to make the car with | $79.99 | <a href="[https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/](https://www.elegoo.com/products/elegoo-smart-robot-car-kit-v-4-0)"> Link </a> |
+| Extra Wheels | Used to perform tests on for traction (optional) | $16.99 | <a href="[https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/](https://www.amazon.com/Tulead-Wheels-Plastic-2-6-Inch-Diameter/dp/B08D3BWW1Z/ref=sr_1_38?crid=DXS8IK7L7B6J&keywords=tt+motor+wheels&qid=1691418600&sprefix=tt+motor+wheels%2Caps%2C90&sr=8-38)"> Link </a> |
+| M3 Nylon Lock Nuts | Used to secure the wheels | $6.94 | <a href="[https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/](https://www.mcmaster.com/products/locknuts/system-of-measurement~metric/metric-18-8-stainless-steel-nylon-insert-locknuts/?s=nylon+lock+nut+m2*25)"> Link </a> |
+| Puffy Paint | Used for traction testing (optional) | $5.41 | <a href="[https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/](https://www.mcmaster.com/products/locknuts/system-of-measurement~metric/metric-18-8-stainless-steel-nylon-insert-locknuts/?s=nylon+lock+nut+m2*25)](https://www.amazon.com/Tulip-Dimensional-Fabric-Paint-Ounces-Puffy-Black/dp/B000H6W2NU/ref=sr_1_10?keywords=puffy+paint&qid=1691419326&sr=8-10)"> Link </a> |
+| Double-Sided Tape | Used for traction testing (optional) | $17.99 | <a href="https://www.amazon.com/EZlifego-Multipurpose-Removable-Transparent-Household/dp/B07VNSXY31/ref=sr_1_7?crid=6ASY9W97YSA4&keywords=double%2Bsided%2Btape&qid=1691419535&sprefix=double%2B%2Caps%2C166&sr=8-7&th=1"> Link </a> |
+| Plasti Dip | Used for traction testing (optional) | $19.99 | <a href="https://www.amazon.com/Plastic-Dip-11202-Yellow-Plasti/dp/B003B3KKMQ/ref=asc_df_B003B3KKMQ/?tag=hyprod-20&linkCode=df0&hvadid=309830467406&hvpos=&hvnetw=g&hvrand=7401179489680010762&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9032142&hvtargid=pla-492066141990&psc=1&tag=&ref=&adgrpid=60510211646&hvpone=&hvptwo=&hvadid=309830467406&hvpos=&hvnetw=g&hvrand=7401179489680010762&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9032142&hvtargid=pla-492066141990"> Link </a> |
+| Hot Glue Gun | Used for traction testing (optional) | $11.99 | <a href="https://www.amazon.com/Liumai-Sticks-Diameter-Crafting-Pink-Blue/dp/B08934P6WN/ref=sr_1_6?crid=24P5TYBZKM55P&keywords=hot+glue+gun+with+sticks&qid=1691596935&sprefix=hot+glue+gun+with+stick%2Caps%2C227&sr=8-6"> Link </a> |
 
 # Other Resources
 Here are some of the outside sources I used for the code and build of my project.
