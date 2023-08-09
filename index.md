@@ -7,7 +7,7 @@ Replace this text with a brief description (2-3 sentences) of your project. This
 
 ![IMG_2767](https://github.com/mayya-s24/Mayya_BluestampPortfolio/assets/140424606/97e0b81d-9ef0-4ebf-9a47-123eb392999d)
 
-```HTML
+<!--
 # Final Milestone
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -17,7 +17,8 @@ For your final milestone, explain the outcome of your project. Key details to in
 - What your biggest challenges and triumphs were at BSE
 - A summary of key topics you learned about
 - What you hope to learn in the future after everything you've learned at BSE
-```
+-->
+
 # Second Milestone
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/No7-U9r60Jc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
