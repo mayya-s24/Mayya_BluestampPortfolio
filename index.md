@@ -1,5 +1,5 @@
 # Remote Control Car
-Replace this text with a brief description (2-3 sentences) of your project. This description should draw the reader in and make them interested in what you've built. You can include what the biggest challenges, takeaways, and triumphs from completing the project were. As you complete your portfolio, remember your audience is less familiar than you are with all that your project entails! WRITE THIS AT THE END!!!
+If you're interested in projects that involve a little bit of everything in terms of engineering, come check this one out! My RC Car was created through some software work and some hardware work, all of which is explained in my milestones shown below. The reason I chose to make and code an RC Car out of all of the projects available was due to the fact that I am very interested in the mechanical side of engineering and getting projects like these to move around with ease, and this project offered experience on all of that. So, if you're interested in those areas of engineering too, then you will love getting to read about my project!
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
@@ -7,17 +7,19 @@ Replace this text with a brief description (2-3 sentences) of your project. This
 
 ![IMG_2767](https://github.com/mayya-s24/Mayya_BluestampPortfolio/assets/140424606/97e0b81d-9ef0-4ebf-9a47-123eb392999d)
 
-<!--
+
 # Final Milestone
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-For your final milestone, explain the outcome of your project. Key details to include are:
-- What you've accomplished since your previous milestone
-- What your biggest challenges and triumphs were at BSE
-- A summary of key topics you learned about
-- What you hope to learn in the future after everything you've learned at BSE
--->
+My third milestone was achieved when I switched the normal lock nuts on the motors in for nylon lock nuts, and when I came up with another idea for a major modification for my project. First, touching on the nylon lock nuts, I would consider this modification pretty significant since they added a new level of stability and consistency with the wheels’ movements. Whenever my RC Car moved fast or curved before adding these nuts, the wheels would start to shake. When I examined what was going on, I figured out that the reason they were moving around on top of the acrylic board was that the nuts connecting the motors to the acrylic board were coming loose. The vibration seemed to be taking a number on the stability of the wheels, and I figured I needed to do something about this issue to fix it. So, with some ideas from Bluestamp instructors and many Google searches for anything that would dampen the vibration on the motors, I finally found nylon lock nuts. I researched this type of lock nut a little bit and found that it would be very effective for keeping the motors in place so the wheels wouldn’t get loose.
+
+So, we purchased the new lock nuts, and once they arrived, I tested them out on my wheels. This was very challenging and took me two classes to complete since the nylon lock nuts are very difficult to install. They are meant to be stuck in place once they are on the wheels, but it took a lot of strength using my wrench to fasten them in completely. However, once they were completely installed in my wheels, I tested the car’s faster movements (moving forward and backward) and the motors did not come loose from the acrylic board at all. So, this proved that my modification of the wheels/motors worked very well.
+
+Now moving onto the second part of this milestone, I also came up with and started to work on a new and major modification for my wheels. This modification involves using four different materials (puffy paint, double-sided tape, hot glue, and plasti dip) to test which one would work best to grip the wheels to the floor. I needed to make a modification surrounding traction for the wheels since they had very little traction to begin with. Every time that the RC Car moved fast (especially when curving), it would slightly slide along the floor. This was all I needed to see to know that something was off in the wheels’ traction, so I knew I needed to create some sort of modification that gave the wheels more grip to the floor. I sadly do not have the sufficient amount of time needed to entirely complete this new modification at this program, though. However, I am planning on working on it at home whenever I have opportunities to do so.
+
+Therefore, this is where I am at with my final update on my project. The movement code is completely done (unless I want to add more movements later) and so is the installation of the nylon lock nuts for the motors. In the future, I hope to learn more about this hands-on, more mechanical side of engineering, since Bluestamp taught me that I really enjoy it.
+
 
 # Second Milestone
 
