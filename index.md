@@ -10,7 +10,7 @@ If you're interested in projects that involve a little bit of everything in term
 
 # Final Milestone
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0U61_O9ypWQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 My third milestone was achieved when I switched the normal lock nuts on the motors in for nylon lock nuts, and when I came up with another idea for a major modification for my project. First, touching on the nylon lock nuts, I would consider this modification pretty significant since they added a new level of stability and consistency with the wheels’ movements. Whenever my RC Car moved fast or curved before adding these nuts, the wheels would start to shake. When I examined what was going on, I figured out that the reason they were moving around on top of the acrylic board was that the nuts connecting the motors to the acrylic board were coming loose. The vibration seemed to be taking a number on the stability of the wheels, and I figured I needed to do something about this issue to fix it. So, with some ideas from Bluestamp instructors and many Google searches for anything that would dampen the vibration on the motors, I finally found nylon lock nuts. I researched this type of lock nut a little bit and found that it would be very effective for keeping the motors in place so the wheels wouldn’t get loose.
 
